@@ -28,6 +28,10 @@ function App() {
       trail.remove();
     }, 1000);
   };
+  
+ 
+  
+
 
   const handleMouseOver = (event) => {
     const randomColor = getRandomColor();
@@ -37,23 +41,27 @@ function App() {
   return (
     <div className="App" onMouseMove={handleMouseMove}>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <div ref={trailRef} className="trail-container"></div>
-        <label htmlFor="nom" onMouseOver={handleMouseOver}>
-          Nom :
-        </label>
-        <input type="text" id="nom" name="nom" required />
+      <form method="post" action="/your-post-endpoint">
+  <img src={logo} className="App-logo" alt="logo" />
+  <div ref={trailRef} className="trail-container"></div>
 
-        <label htmlFor="prenom" onMouseOver={handleMouseOver}>
-          Prénom :
-        </label>
-        <input type="text" id="prenom" name="prenom" required />
+  <label htmlFor="nom" onMouseOver={handleMouseOver}>
+    Nom :
+  </label>
+  <input type="text" id="nom" name="nom" required />
 
-        <label htmlFor="age" onMouseOver={handleMouseOver}>
-          Âge :
-        </label>
-        <input type="number" id="age" name="age" required />
-        <input type="submit" value="Soumettre" />
+  <label htmlFor="prenom" onMouseOver={handleMouseOver}>
+    Prénom :
+  </label>
+  <input type="text" id="prenom" name="prenom" required />
+
+  <label htmlFor="age" onMouseOver={handleMouseOver}>
+    Âge :
+  </label>
+  <input type="number" id="age" name="age" required />
+
+  <input type="submit" value="Soumettre" />
+</form>
       </header>
     </div>
   );
