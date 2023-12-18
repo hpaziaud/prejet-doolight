@@ -39,8 +39,13 @@ function App() {
   };
 
 
+  
+  const bouton = { etat: true };
+  const logins= ["julien","langlace"];
   const exo29identifiant = "snake"
   const exo29passwrd = "123456"
+ 
+ 
   return (
     <div className="App" onMouseMove={handleMouseMove}>
       <header className="App-header">
@@ -70,8 +75,32 @@ function App() {
 <div>l'identifiant est : {exo29identifiant}, 
 le password est : {exo29passwrd} </div>
 
-      </header>
+
+<div>
+  {bouton.etat ? (
+    <p>Le bouton est activé</p>
+  ) : (
+    <p>Le bouton est désactivé
+      <ul>
+        {
+          logins.map(login=> (
+            <li>
+              {login}
+            </li>
+          ))
+        }
+      </ul>
+    </p>
+  )}
+</div>
+
+
+  
+
+
+</header>
     </div>
+    
   );
 }
 
