@@ -38,22 +38,26 @@ function App() {
     event.target.style.color = randomColor;
   };
 
+
+  const exo29identifiant = "snake"
+  const exo29passwrd = "123456"
   return (
     <div className="App" onMouseMove={handleMouseMove}>
       <header className="App-header">
-      <form method="post" action="/your-post-endpoint">
-  <img src={logo} className="App-logo" alt="logo" />
+      <img src={logo} className="App-logo" alt="logo" />
   <div ref={trailRef} className="trail-container"></div>
-
-  <label htmlFor="nom" onMouseOver={handleMouseOver}>
-    Nom :
+      <form method="post" action="/your-post-endpoint">
+  
+<ls>
+  <label htmlFor="identifiant" onMouseOver={handleMouseOver}>
+    identifiant :
   </label>
-  <input type="text" id="nom" name="nom" required />
+  <input type="text" id="identifiant" name="nom" required />
 
-  <label htmlFor="prenom" onMouseOver={handleMouseOver}>
-    Prénom :
+  <label htmlFor="password" onMouseOver={handleMouseOver}>
+    password :
   </label>
-  <input type="text" id="prenom" name="prenom" required />
+  <input type="text" id="password" name="prenom" required />
 
   <label htmlFor="age" onMouseOver={handleMouseOver}>
     Âge :
@@ -61,7 +65,11 @@ function App() {
   <input type="number" id="age" name="age" required />
 
   <input type="submit" value="Soumettre" />
+  </ls>
 </form>
+<div>l'identifiant est : {exo29identifiant}, 
+le password est : {exo29passwrd} </div>
+
       </header>
     </div>
   );
