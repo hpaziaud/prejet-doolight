@@ -48,7 +48,7 @@ function App() {
   const logins = ["julien", "langlace"];
   const exo29identifiant = "snake"
   const passwrd = "123456"
-  const isLoggedIn = false;
+  
 
 
 
@@ -58,6 +58,7 @@ function App() {
     message2: '',
   });
 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
 
   // Gestionnaire de saisie pour mettre à jour l'état du formulaire
@@ -77,11 +78,11 @@ function App() {
     if (formData.message1 === passwrd) {
 
       console.log('Les données du formulaire sont égales à la constante.');
-      isLoggedIn = true;
+      setIsLoggedIn(true);
     } else {
     
       console.log('Les données du formulaire ne sont pas égales à la constante.');
-      isLoggedIn = false;
+      setIsLoggedIn(false);
     }
   };
 
